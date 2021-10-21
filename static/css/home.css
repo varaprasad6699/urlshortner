@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;/*#EFEFEF*/
+    color: white;
+}
+
+#topmar{
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+#toggle{
+    float: right;
+    margin-right: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top h1{
+    font-size: 50px;
+}
+
+#top img{
+    height: 100px;
+    width: 75px;
+}
+
+#bottom{
+    text-align: center;
+}
+
+#middlestart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#middlestart input{
+    width: 70%;
+    height: 45px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px lightgrey;
+    padding-left: 7px;
+    font-size: 17px;
+    border: 1px solid #B6BCC9;
+}
+
+#middlestart #button{
+    height: 49px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    background-color: #1E5DEB;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px lightgrey;
+}
+
+#middleend{
+    height: 150px;
+    width: 75%;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 3%;
+    border: 1px solid #B6BCC9;
+    box-shadow: 3px 3px lightgrey;
+}
+
+#middleend p{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#middleend a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: #1E5DEB;
+}
+
+#middleend hr{
+    width: 95%;
+    border: 1px solid #B6BCC9;
+    background-color: #B6BCC9;
+    opacity: 0.5;
+}
+
+#middleend button{
+    height: 30px;
+    width: 50px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #1E5DEB;
+    border: none;
+    cursor: pointer;
+}
+
+#bottom h1{
+    margin-bottom: 0px;
+}
+
+#bottom p{
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+#bottomin{
+    display: flex;
+    justify-content: space-around;
+}
+
+#bottomin div{
+    height: 125px;
+    width: 250px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px lightgrey;
+    border: 1px solid #B6BCC9;
+}
+
+@media only screen and (max-width: 600px) {
+  #bottomin{
+    flex-direction: column;
+    align-items: center;
+  }
+  #bottomin div{
+    margin-bottom: 30px;
+  }
+  #middleend{
+    width: 90%;
+  }
+}

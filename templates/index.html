@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}?{% now 'U' %}">
+    </head>
+
+    <body>
+        <div id="topmar">
+        </div>
+
+            <img onclick="toggle()" id="toggle" height="25" width="25" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/75176/sun-icon-clipart-xl.png">
+
+        <div id="top">
+            <h1>SHORTNY 
+            </h1>
+            <img id="topimg" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18689296.jpg">
+        </div>
+
+        <div id="middle">
+            <form method="POST">
+                {% csrf_token %}
+                <div id="middlestart"> 
+                    <input id="input" placeholder="http://" type="text" name="link">
+                    <input type="submit" id="button">
+                </div>
+            </form>
+            {% if uuid|length > 0 %}
+            <div id="middleend">
+                <p>Original URL</p>
+                <a id="originalurl" href="" target="_blank">
+                    {{link}}
+                </a>
+                <hr/>
+                <p>Shortend URL</p>
+                <a id="shortendurl" href="" target="_blank">
+                    127.0.0.1:8000/{{uuid}}
+                </a>
+                <button id="copybtn" onclick="copy()">
+                    copy
+                </button>
+            </div>
+            {% endif %}
+        </div>
+
+        <div id="bottom">
+            <h1>
+                What is Here?
+            </h1>
+            <p>
+                <span style="color: rgb(79, 9, 97);">A shortcut to make the link easier to manage. </span> You can view Total hints, Total URLs, Today URLs from below.
+            </p>
+            <div id="bottomin">
+                <div>
+                    <h3>Total hits</h3>
+                    <h3>1</h3>
+                </div>
+
+                <div>
+                    <h3>Total URLs</h3>
+                    <h3>{{total_links}}</h3>
+                </div>
+
+                <div>
+                    <h3>Today URLs</h3>
+                    <h3>{{today_taps}}</h3>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <script type="text/javascript">
+            
+            var boolean = true;
+
+            function toggle(){
+
+                if(boolean){
+                   
+                    document.body.style.backgroundColor = "#EFEFEF";
+                    document.body.style.color = "black";
+                    document.getElementById("topmar").style.backgroundColor = "black";
+                    document.getElementById("toggle").src = "https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/moon_dark_mode_night-2-512.png";
+                    document.getElementById("topimg").src = "https://cdn.icon-icons.com/icons2/2348/PNG/512/link_icon_142996.png"
+                }
+                else{
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    document.getElementById("topmar").style.backgroundColor = "white";
+                    document.getElementById("toggle").src = "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/75176/sun-icon-clipart-xl.png";
+                    document.getElementById("topimg").src = "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18689296.jpg"
+
+                }
+                boolean = !boolean;
+            }
+
+           /* function shorten(){
+                var inp = document.getElementById("input").value;
+                document.getElementById("originalurl").innerText = inp;
+                document.getElementById("originalurl").href = inp;
+                document.getElementById("middleend").style.display = "block"
+            }*/
+
+            function copy(){
+                var val = document.getElementById("shortendurl").innerText;
+                navigator.clipboard.writeText(val);
+                alert("URL copied");
+            }
+
+        </script>
+
+    </body>
+</html>
