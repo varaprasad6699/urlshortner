@@ -28,11 +28,6 @@
             </form>
             {% if uuid|length > 0 %}
             <div id="middleend">
-                <p>Original URL</p>
-                <a id="originalurl" href="" target="_blank">
-                    {{link}}
-                </a>
-                <hr/>
                 <p>Shortend URL</p>
                 <a id="shortendurl" href="" target="_blank">
                     127.0.0.1:8000/{{uuid}}
@@ -54,7 +49,7 @@
             <div id="bottomin">
                 <div>
                     <h3>Total hits</h3>
-                    <h3>1</h3>
+                    <h3>{{ip_count}}</h3>
                 </div>
 
                 <div>

@@ -48,42 +48,48 @@ body{
 }
 
 #middlestart input{
+    margin-left: 10%;
+    margin-right: -11%;
     width: 70%;
     height: 45px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
-    box-shadow: 3px 3px lightgrey;
+   
     padding-left: 7px;
     font-size: 17px;
     border: 1px solid #B6BCC9;
 }
 
 #middlestart #button{
+    margin-right: 10%;
     height: 49px;
+    border-top-left-radius: inherit;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     color: white;
-    background-color: #1E5DEB;
+    background-color: #d5f621;
     border: none;
     cursor: pointer;
-    box-shadow: 3px 3px lightgrey;
+    
 }
 
 #middleend{
-    height: 150px;
-    width: 75%;
+    
+    width: 30%;
     background-color: white;
     border-radius: 10px;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 5%;
     border: 1px solid #B6BCC9;
-    box-shadow: 3px 3px lightgrey;
+   text-align: center;
+   padding: 20px;
 }
 
 #middleend p{
     font-size: 12px;
     margin-left: 10px;
+    color: #ffa500;
 }
 
 #middleend a{
@@ -144,6 +150,9 @@ body{
     margin-bottom: 30px;
   }
   #middleend{
-    width: 90%;
+    width: 70%;
+  }
+  #copybtn{
+      display: none;
   }
 }
