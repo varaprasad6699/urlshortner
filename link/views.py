@@ -22,12 +22,12 @@ def home(request):
     print("ip address",ip) 
     user=IpAddress(user_ip=ip)
     exists=IpAddress.objects.filter(user_ip=ip).count()
-    if exists>0:
+    if exists=1:
         print("how many same",exists)
     else:
         user.save()
-    ip_count=IpAddress.objects.all().count()+20
-    print("ip count",ip_count+20)
+    ip_count=IpAddress.objects.all().count()
+    print("ip count",ip_count)
     if request.method=='POST':
         print("entered inside........")
         link=request.POST.get('link')
