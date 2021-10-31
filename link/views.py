@@ -22,12 +22,8 @@ def home(request):
     print("ip address",ip) 
     user=IpAddress(user_ip=ip)
     exists=IpAddress.objects.filter(user_ip=ip).count()
-<<<<<<< HEAD
     print("exists",exists)
     if exists==1:
-=======
-    if exists=1:
->>>>>>> fec9460462d8b750b52bce8697952c4e1e0b2659
         print("how many same",exists)
     else:
         user.save()
